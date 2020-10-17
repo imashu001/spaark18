@@ -12,7 +12,7 @@ class App extends React.Component {
       items: [],
     };
   }
-  handleChange = (e) => {
+  handleClick = (e) => {
     console.log(e.target.value);
     this.setState({
       checked: !this.state.checked,
@@ -36,7 +36,7 @@ class App extends React.Component {
                 <input
                   type="checkbox"
                   value="Aasalya Jayavanti"
-                  onClick={this.handleClick}
+                  onClick={(e) => this.handleClick(e)}
                 />
                 <label> Aasalya Jayavanti</label>
               </li>
@@ -115,7 +115,7 @@ class App extends React.Component {
                 <input
                   type="checkbox"
                   value=" AAron Almaraj"
-                  onChange={this.handleChange}
+                  onChange={this.handleClick}
                 />
                 <label>Aaron Almaraz</label>
                 <br />
@@ -124,7 +124,7 @@ class App extends React.Component {
                 <input
                   type="checkbox"
                   value="Jelena Denisova"
-                  onChange={this.handleChange}
+                  onChange={this.handleClick}
                 />
                 <label> Jelena Denisova</label>
               </li>
